@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace WatchStoreApp.Data;
 
-public class ApplicationDbContext : IdentityDbContext
+public class ApplicationDbContext : IdentityDbContext<Cliente>
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
