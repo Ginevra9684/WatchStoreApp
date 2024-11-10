@@ -9,4 +9,22 @@ public class ApplicationDbContext : IdentityDbContext
         : base(options)
     {
     }
+    public DbSet<Prodotto> Prodotti { get; set; }
+    public DbSet<Orologio> Orologi { get; set; }
+    public DbSet<Categoria> Categorie { get; set; }
+    public DbSet<Marca> Marche { get; set; }
+    public DbSet<Materiale> Materiali { get; set; }
+    public DbSet<Tipologia> Tipologie { get; set; }
+    public DbSet<Genere> Generi { get; set; }
+
+/*  !!! PER CREARE PRODOTTI E OROLOGI SEPARATI
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+
+        // Configure TPT
+        modelBuilder.Entity<Prodotto>().ToTable("Prodotti");
+        modelBuilder.Entity<Orologio>().ToTable("Orologi");
+    }
+*/
 }
