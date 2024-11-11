@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WatchStoreApp.Data;
 
@@ -10,9 +11,11 @@ using WatchStoreApp.Data;
 namespace WatchStoreApp.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241110214636_AddClienteModel")]
+    partial class AddClienteModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.10");
@@ -281,37 +284,6 @@ namespace WatchStoreApp.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("Ordine", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("ClienteId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("DataAcquisto")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<int?>("OrologioId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("Quantita")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ClienteId");
-
-                    b.HasIndex("OrologioId");
-
-                    b.ToTable("Ordini");
-                });
-
             modelBuilder.Entity("Prodotto", b =>
                 {
                     b.Property<int>("Id")
@@ -452,21 +424,6 @@ namespace WatchStoreApp.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("Ordine", b =>
-                {
-                    b.HasOne("Cliente", "Cliente")
-                        .WithMany()
-                        .HasForeignKey("ClienteId");
-
-                    b.HasOne("Orologio", "Orologio")
-                        .WithMany()
-                        .HasForeignKey("OrologioId");
-
-                    b.Navigation("Cliente");
-
-                    b.Navigation("Orologio");
                 });
 
             modelBuilder.Entity("Prodotto", b =>

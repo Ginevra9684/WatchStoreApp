@@ -10,7 +10,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+// Cliente invece di IdentityUser perchè è stata creata una classe personalizzata
+builder.Services.AddDefaultIdentity<Cliente>(options => options.SignIn.RequireConfirmedAccount = true)
     //.AddRoles<IdentityRole>() !!! PER I RUOLI
     .AddEntityFrameworkStores<ApplicationDbContext>();
     // .AddDefaultTokenProviders(); !!! PER RESETS E CONFIRMATIONS
