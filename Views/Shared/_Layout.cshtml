@@ -31,7 +31,10 @@
                         @if (User.IsInRole("Admin"))
                         {
                           <li class="nav-item">
-                              <a class="nav-link text-dark" asp-area="" asp-controller="Gestioni" asp-action="Index">Gestionale</a> <!-- Pagina conservata includes pages senza logiche controller-->
+                              <a class="nav-link text-dark" asp-area="" asp-controller="Gestioni" asp-action="Index">Gestionale</a> 
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link text-dark" asp-area="" asp-controller="Prodotti" asp-action="AggiungiProdotto">Aggiungi Prodotto</a> 
                           </li>
                         }
                     </ul>
