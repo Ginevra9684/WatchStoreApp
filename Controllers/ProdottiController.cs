@@ -26,6 +26,23 @@ public class ProdottiController : Controller
 
         var prodottiFiltrati = FiltraProdotti(prodottiTotali.ToList(), minPrezzo, maxPrezzo, categoriaId, marcaId, materialeId, tipologiaId);
 
+        if (!prodottiTotali.Any())
+        {
+            // Se non ci sono prodotti, passiamo un ViewModel vuoto
+            var viewModelNoProducts = new ProdottiViewModel
+            {
+                Orologi = new List<Orologio>(), // Lista vuota
+                MinPrezzo = 0,
+                MaxPrezzo = 0,
+                NumeroPagine = 1,
+                PaginaCorrente = 1,
+                Categorie = categorie,
+                Marche = marche,
+                Materiali = materiali,
+                Tipologie = tipologie
+            };
+            return View(viewModelNoProducts); // Mostra la vista con la lista vuota e il messaggio
+        }
         // Prende il conteggio totale per la paginazione
         int quantitaProdotti = prodottiFiltrati.Count();
 
@@ -48,14 +65,10 @@ public class ProdottiController : Controller
             MaxPrezzo = maxPrezzo ?? prodottiPaginati.Max(p => p.Prezzo),
             NumeroPagine = numeroPagine,
             PaginaCorrente = paginaCorrente,
-            Categorie = categorie,  // Passa le categorie per il dropdown
-            CategoriaSelezionata = categoriaId, // Passa la categoria selezionata, se presente
-            Marche = marche,    // Passa le marche per il dropdown
-            MarcaSelezionata = marcaId,  // Passa la marca selezionata, se presente
+            Categorie = categorie, 
+            Marche = marche,  
             Materiali = materiali,
-            MaterialeSelezionato = materialeId,
-            Tipologie = tipologie,
-            TipologiaSelezionata = tipologiaId
+            Tipologie = tipologie
         };
         return View(viewModel);
     }
