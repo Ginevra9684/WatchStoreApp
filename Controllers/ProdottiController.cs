@@ -21,16 +21,16 @@ public class ProdottiController : Controller
         var marche = _context.Marche.ToList();
         var materiali = _context.Materiali.ToList();
         var tipologie = _context.Tipologie.ToList();
-        
-        // Inizia a costruire la query
-        List<Orologio> prodottiTotali = new List<Orologio>();
 
-        prodottiTotali = CaricaProdotti();
+        var prodottiTotali = CaricaProdotti();
+
+        var prodottiFiltrati = FiltraProdotti(prodottiTotali.ToList(), minPrezzo, maxPrezzo, categoriaId, marcaId, materialeId, tipologiaId);
+
         // Prende il conteggio totale per la paginazione
-        int quantitaProdotti = prodottiTotali.Count();
+        int quantitaProdotti = prodottiFiltrati.Count();
 
         // Applica la paginazione (Skip and Take)
-        var prodotti = FiltraProdotti(prodottiTotali, minPrezzo, maxPrezzo, categoriaId, marcaId, materialeId, tipologiaId)
+        var prodotti = prodottiFiltrati
                             .Skip((paginaCorrente - 1) * prodottiPerPagina) // Salta gli oggetti della pagina corrente
                             .Take(prodottiPerPagina) // Prende gli oggetti della pagina corrente
                             .ToList(); // Esegue la query in modo asincrono
@@ -92,7 +92,7 @@ public class ProdottiController : Controller
             {
                 scartato = true;
             }
-            if(scartato = false)
+            if(scartato == false)
             {
                 prodottiFiltrati.Add(prodotto);
             }
@@ -168,21 +168,15 @@ public class ProdottiController : Controller
 
     private List<Orologio> CaricaProdotti()
     {
-        List<Orologio> orologiTotali = new List<Orologio>();
         try
         {
-            foreach (Orologio orologio in _context.Orologi)
-            {
-                orologiTotali.Add(orologio); 
-            }
-            return orologiTotali;
+            return _context.Orologi.ToList();  // Return all products as a List
         }
         catch (Exception ex)
         {
             _logger.LogError("Errore nella lettura : {Message} \n Exception Type : {ExceptionType} \n Stack Trace : {StackTrace}", ex.Message , ex.GetType().Name , ex.StackTrace);
-            return new List<Orologio>(); // Ritorna una lista vuota se c'è un errore
+            return new List<Orologio>(); // Return an empty list in case of error
         }
-        
     }
 
     private List<Categoria> CaricaCategorie()
