@@ -35,7 +35,7 @@ public class GestioniController : Controller
             _context.Categorie.Add(categoria);
             _context.SaveChangesAsync();
             
-            return RedirectToAction("Index"); // Or to any other page, like a confirmation page
+            return RedirectToAction("Index");
         }
 
         return View();
@@ -46,7 +46,6 @@ public class GestioniController : Controller
         return View();
     }
 
-    // POST: Gestiscie la sottomisione del form
     [HttpPost]
     [ValidateAntiForgeryToken]
     public IActionResult AggiungiMarca(string nome)
@@ -61,7 +60,7 @@ public class GestioniController : Controller
             _context.Marche.Add(marca);
             _context.SaveChangesAsync();
             
-            return RedirectToAction("Index"); // Or to any other page, like a confirmation page
+            return RedirectToAction("Index");
         }
 
         return View();
@@ -72,7 +71,6 @@ public class GestioniController : Controller
         return View();
     }
 
-    // POST: Gestiscie la sottomisione del form
     [HttpPost]
     [ValidateAntiForgeryToken]
     public IActionResult AggiungiMateriale(string nome)
@@ -87,7 +85,7 @@ public class GestioniController : Controller
             _context.Materiali.Add(materiale);
             _context.SaveChangesAsync();
             
-            return RedirectToAction("Index"); // Or to any other page, like a confirmation page
+            return RedirectToAction("Index"); 
         }
 
         return View();
@@ -98,7 +96,6 @@ public class GestioniController : Controller
         return View();
     }
 
-    // POST: Gestiscie la sottomisione del form
     [HttpPost]
     [ValidateAntiForgeryToken]
     public IActionResult AggiungiTipologia(string nome)
@@ -113,7 +110,32 @@ public class GestioniController : Controller
             _context.Tipologie.Add(tipologia);
             _context.SaveChangesAsync();
             
-            return RedirectToAction("Index"); // Or to any other page, like a confirmation page
+            return RedirectToAction("Index"); 
+        }
+
+        return View();
+    }
+
+    public IActionResult AggiungiGenere()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult AggiungiGenere(string nome)
+    {
+        if (ModelState.IsValid)
+        {
+            var genere = new Genere
+            {
+                Nome = nome
+            };
+
+            _context.Generi.Add(genere);
+            _context.SaveChangesAsync();
+            
+            return RedirectToAction("Index"); 
         }
 
         return View();
