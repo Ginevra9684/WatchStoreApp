@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Aggiungi nuova marca";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="Nome">Nome marca</label>
+        <input type="text" id="Nome" name="nome" class="form-control" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Aggiungi</button>
+</form>

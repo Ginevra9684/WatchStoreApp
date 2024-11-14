@@ -40,4 +40,30 @@ public class GestioniController : Controller
 
         return View();
     }
+
+    public IActionResult AggiungiMarca()
+    {
+        return View();
+    }
+
+    // POST: Gestiscie la sottomisione del form
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult AggiungiMarca(string nome)
+    {
+        if (ModelState.IsValid)
+        {
+            var marca = new Marca
+            {
+                Nome = nome
+            };
+
+            _context.Marche.Add(marca);
+            _context.SaveChangesAsync();
+            
+            return RedirectToAction("Index"); // Or to any other page, like a confirmation page
+        }
+
+        return View();
+    }
 }
