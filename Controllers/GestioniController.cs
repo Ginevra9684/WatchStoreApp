@@ -66,4 +66,30 @@ public class GestioniController : Controller
 
         return View();
     }
+
+    public IActionResult AggiungiMateriale()
+    {
+        return View();
+    }
+
+    // POST: Gestiscie la sottomisione del form
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult AggiungiMateriale(string nome)
+    {
+        if (ModelState.IsValid)
+        {
+            var materiale = new Materiale
+            {
+                Nome = nome
+            };
+
+            _context.Materiali.Add(materiale);
+            _context.SaveChangesAsync();
+            
+            return RedirectToAction("Index"); // Or to any other page, like a confirmation page
+        }
+
+        return View();
+    }
 }
