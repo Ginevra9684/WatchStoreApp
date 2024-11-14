@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace WatchStoreApp.Data;
-
 public class ApplicationDbContext : IdentityDbContext<Cliente>
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)

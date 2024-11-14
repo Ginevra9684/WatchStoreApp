@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Gestionale";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<p>Scegli un'opzione</p>
+
+<ul>
+    <li><a class="btn btn-success" asp-controller="Gestioni" asp-action="AggiungiCategoria">Aggiungi una categoria</a></li>
+    <li><a class="btn btn-success" asp-controller="Gestioni" asp-action="AggiungiMarca">Aggiungi una marca</a></li>
+    <li><a class="btn btn-success" asp-controller="Gestioni" asp-action="AggiungiMateriale">Aggiungi una materiale</a></li>
+    <li><a class="btn btn-info" asp-controller="Gestioni" asp-action="AggiungiTipologia">Aggiungi una tipologia</a></li>
+</ul>

@@ -54,12 +54,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Ginevra/Documents/WorkingArea/WatchStoreApp/Views/Gestioni/AggiungiCategoria.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VzdGlvbmlcQWdnaXVuZ2lDYXRlZ29yaWEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ginevra/Documents/WorkingArea/WatchStoreApp/Views/Gestioni/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VzdGlvbmlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Ginevra/Documents/WorkingArea/WatchStoreApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Ginevra/Documents/WorkingArea/WatchStoreApp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ginevra/Documents/WorkingArea/WatchStoreApp/Views/Prodotti/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZG90dGlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Ginevra/Documents/WorkingArea/WatchStoreApp/Views/Shared/Error.cshtml]
