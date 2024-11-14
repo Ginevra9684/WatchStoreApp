@@ -92,4 +92,30 @@ public class GestioniController : Controller
 
         return View();
     }
+
+    public IActionResult AggiungiTipologia()
+    {
+        return View();
+    }
+
+    // POST: Gestiscie la sottomisione del form
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult AggiungiTipologia(string nome)
+    {
+        if (ModelState.IsValid)
+        {
+            var tipologia = new Tipologia
+            {
+                Nome = nome
+            };
+
+            _context.Tipologie.Add(tipologia);
+            _context.SaveChangesAsync();
+            
+            return RedirectToAction("Index"); // Or to any other page, like a confirmation page
+        }
+
+        return View();
+    }
 }
