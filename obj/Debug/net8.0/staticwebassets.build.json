@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MFuhcKIxub9odL9mQ60/hMfUNGLqoOrOyGj3qAcPhgw=",
+  "Hash": "kGssGqbaJrcBiuy7C8j8104nWgU2QQ3rRk9AcS3vKjA=",
   "Source": "WatchStoreApp",
   "BasePath": "_content/WatchStoreApp",
   "Mode": "Default",
@@ -1423,12 +1423,12 @@
       "OriginalItemSpec": "wwwroot\\immaginiProdotti\\PatekPhilippe1.jpg"
     },
     {
-      "Identity": "C:\\Users\\Ginevra\\Documents\\WorkingArea\\WatchStoreApp\\wwwroot\\immaginiProdotti\\patekPhilippe2.jpg",
+      "Identity": "C:\\Users\\Ginevra\\Documents\\WorkingArea\\WatchStoreApp\\wwwroot\\immaginiProdotti\\PatekPhilippe2.jpg",
       "SourceId": "WatchStoreApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Ginevra\\Documents\\WorkingArea\\WatchStoreApp\\wwwroot\\",
       "BasePath": "_content/WatchStoreApp",
-      "RelativePath": "immaginiProdotti/patekPhilippe2.jpg",
+      "RelativePath": "immaginiProdotti/PatekPhilippe2.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1439,7 +1439,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\immaginiProdotti\\patekPhilippe2.jpg"
+      "OriginalItemSpec": "wwwroot\\immaginiProdotti\\PatekPhilippe2.jpg"
     },
     {
       "Identity": "C:\\Users\\Ginevra\\Documents\\WorkingArea\\WatchStoreApp\\wwwroot\\immaginiProdotti\\Rolex1.jpg",

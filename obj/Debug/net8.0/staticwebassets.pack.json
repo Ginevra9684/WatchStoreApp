@@ -53,6 +53,10 @@
       "PackagePath": "staticwebassets\\immaginiProdotti\\PatekPhilippe1.jpg"
     },
     {
+      "Id": "C:\\Users\\Ginevra\\Documents\\WorkingArea\\WatchStoreApp\\wwwroot\\immaginiProdotti\\PatekPhilippe2.jpg",
+      "PackagePath": "staticwebassets\\immaginiProdotti\\PatekPhilippe2.jpg"
+    },
+    {
       "Id": "C:\\Users\\Ginevra\\Documents\\WorkingArea\\WatchStoreApp\\wwwroot\\immaginiProdotti\\Rolex1.jpg",
       "PackagePath": "staticwebassets\\immaginiProdotti\\Rolex1.jpg"
     },
@@ -87,10 +91,6 @@
     {
       "Id": "C:\\Users\\Ginevra\\Documents\\WorkingArea\\WatchStoreApp\\wwwroot\\immaginiProdotti\\Seiko4.jpg",
       "PackagePath": "staticwebassets\\immaginiProdotti\\Seiko4.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Ginevra\\Documents\\WorkingArea\\WatchStoreApp\\wwwroot\\immaginiProdotti\\patekPhilippe2.jpg",
-      "PackagePath": "staticwebassets\\immaginiProdotti\\patekPhilippe2.jpg"
     },
     {
       "Id": "C:\\Users\\Ginevra\\Documents\\WorkingArea\\WatchStoreApp\\wwwroot\\js\\site.js",
